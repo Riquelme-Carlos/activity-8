@@ -8,7 +8,9 @@
     @endif
 
 
-    <a href="{{url('superheroe/create')}}">Registrar nuevo Superheroe</a>
+    <a href="{{url('superheroe/create')}}" class="btn btn-primary">Registrar nuevo Superheroe</a>
+    <br>
+
     <table class="table table-light">
         <thead class="thead-light">
             <tr>
@@ -38,7 +40,7 @@
 
                     |
 
-                    <form action="{{ url('/superheroe/'.$superheroe->id) }}" method="post">
+                    <form action="{{ url('/superheroe/'.$superheroe->id) }}" method="post" class="d-inline">
                         @csrf
                         {{ method_field('DELETE') }}
                         <input type="submit" onclick="return confirm('Deseas realmente borrar este registro?')" value="Eliminar">

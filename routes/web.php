@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::resource('superheroe', SuperheroeController::class)->middleware('auth');
 
 
-Auth::routes();
+Auth::routes(['register'=>false,'reset'=>false]);
 
 Route::get('/home', [SuperheroeController::class, 'index'])->name('home');
 
